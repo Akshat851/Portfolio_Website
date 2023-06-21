@@ -19,21 +19,35 @@ export const ExperienceGridCard = ({ obj }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [hovered, setHovered] = useState(false);
   return (
-    <Box elevation="xlarge">
+    <Box
+      elevation="xlarge"
+      animation={{ type: isHovered ? "jiggle" : "none", duration: 1500 }}
+    >
       <Card
-        //   border={{ color: obj.Color, size: "small" }}
+        height="200px"
+        border={{ color: obj.color }}
         // margin="small"
         flex="grow"
       >
         <CardHeader>
-          <Box pad="small" fill="horizontal" align="center">
-            <Html5 size="xlarge" color="orange" />
+          <Box
+            pad="small"
+            fill="horizontal"
+            align="center"
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+          >
+            <obj.icon size="130" color={obj.color} />
           </Box>
         </CardHeader>
         <CardFooter>
           <Box pad="small" fill="horizontal" align="center">
             <Text size="large" color="white">
-              Link
+              {obj.title}
             </Text>
           </Box>
         </CardFooter>

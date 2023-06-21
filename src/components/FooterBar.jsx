@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Box, Button, Footer, ResponsiveContext, Text } from "grommet";
 import {
   Facebook,
@@ -8,15 +8,17 @@ import {
   Mail,
   Twitter,
 } from "grommet-icons";
+import { ButtonHelper01 } from "./ButtonHelper01";
 export const FooterBar = () => {
   const size = useContext(ResponsiveContext);
-  const year = new Date().getFullYear();
-
+  const [isHovered, setIsHovered] = useState(false);
   const footerLinks = [
-    { label: "Terms" },
-    { label: "Privacy" },
-    { label: "Security" },
-    { label: "Feedback" },
+    { icon: Mail },
+    { icon: Linkedin },
+    { icon: Github },
+    { icon: Instagram },
+    { icon: Facebook },
+    { icon: Twitter },
   ];
   return (
     <Box>
@@ -28,12 +30,9 @@ export const FooterBar = () => {
         justify="center"
       >
         <Box direction="row" gap="xsmall">
-          <Button icon={<Mail color="#FFFFFF" />} />
-          <Button icon={<Linkedin color="#FFFFFF" />} />
-          <Button icon={<Github color="#FFFFFF" />} />
-          <Button icon={<Instagram color="#FFFFFF" />} />
-          <Button icon={<Facebook color="#FFFFFF" />} />
-          <Button icon={<Twitter color="#FFFFFF" />} />
+          {footerLinks.map((obj, index) => {
+            return <ButtonHelper01 obj={obj} key={index} />;
+          })}
         </Box>
       </Footer>
     </Box>

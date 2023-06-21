@@ -17,11 +17,19 @@ export const NavBar = () => {
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   };
-
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 80) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+  window.addEventListener("scroll", changeNavbarColor);
   return (
     <Header
       className="navbar"
-      background="#34495E"
+      background={colorChange ? "#293445" : "#293445"}
       pad="small"
       width="100%"
       elevation="small"
@@ -45,7 +53,7 @@ export const NavBar = () => {
                     key={key}
                     round="56px"
                     hoverIndicator={{
-                      color: "#2a384f",
+                      color: "#171E29",
                     }}
                     onClick={() => {}}
                     pad="small"

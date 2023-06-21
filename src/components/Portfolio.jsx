@@ -4,6 +4,7 @@ import {
   Heading,
   Paragraph,
   Text,
+  Image,
   Grid,
   ResponsiveContext,
 } from "grommet";
@@ -14,7 +15,8 @@ export const Portfolio = () => {
 
   const projects = [
     {
-      Description: "Developed Crowdfunding website using Blockchain.",
+      Description:
+        "Developed Crowdfunding website using Blockchain technology.",
       Link: "abc",
       ImageSrc: ArrayDestruct,
       Color: "#e8fc4c",
@@ -47,11 +49,7 @@ export const Portfolio = () => {
     },
   ];
   return (
-    <Box
-      pad="xlarge"
-      //   background="linear-gradient(to bottom, #865ED6, #18BAB9)"
-      width="100%"
-    >
+    <Box pad="xlarge" width="100%">
       <u style={{ textDecorationColor: "#6FFFB0" }}>
         <Heading color="white" level={1} margin="none">
           Portfolio
@@ -60,6 +58,7 @@ export const Portfolio = () => {
       <Text color="#FFFFFF" margin={{ top: "small", bottom: "medium" }}>
         Checkout some of my work right here
       </Text>
+
       <Box>
         <Grid
           columns={!["xsmall"].includes(size) ? "medium" : "100%"}

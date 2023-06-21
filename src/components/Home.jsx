@@ -48,7 +48,7 @@ export const Home = () => {
               size: "small",
             }}
             focusIndicator={false}
-            hoverIndicator={{ color: "#26344a" }}
+            hoverIndicator={{ color: "#171E29" }}
             onClick={() => {}}
             pad={{ horizontal: "medium", vertical: "small" }}
           >

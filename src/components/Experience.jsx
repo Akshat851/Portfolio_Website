@@ -7,38 +7,91 @@ import {
   Grid,
   ResponsiveContext,
 } from "grommet";
+import {
+  TbBrandPython,
+  TbBrandHtml5,
+  TbBrandCss3,
+  TbBrandJavascript,
+  TbBrandReact,
+  TbBrandCpp,
+  TbBrandPowershell,
+  TbBrandMysql,
+} from "react-icons/tb";
+import { DiNodejs } from "react-icons/di";
+import { FaJava } from "react-icons/fa";
+import { BsFiletypeXml } from "react-icons/bs";
+import { SiFlask, SiMongodb } from "react-icons/si";
 import { ExperienceGridCard } from "./DataGrid/ExperienceGridCard";
-import htmlImg from "../assets/html.png";
-import cssImg from "../assets/css.png";
-import githubImg from "../assets/github.png";
-import ArrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
-import { Html5 } from "grommet-icons";
 export const Experience = () => {
   const size = useContext(ResponsiveContext);
   const projects = [
     {
-      Title: "Kannada Language App",
-      Link: "abc",
-      ImageSrc: ArrayDestruct,
-      Color: "orange",
+      icon: TbBrandCpp,
+      color: "#007bff",
+      title: "C++",
     },
     {
-      Title: "Portfolio Website",
-      Link: "abc",
-      ImageSrc: ArrayDestruct,
-      Color: "blue",
+      icon: FaJava,
+      color: "#f89820",
+      title: "Java",
     },
     {
-      Title: "Decentralized Government Funding",
-      Link: "abc",
-      ImageSrc: ArrayDestruct,
-      Color: "black",
+      icon: TbBrandPython,
+      color: "#f7e018",
+      title: "Python",
     },
     {
-      Title: "Decentralized Government Funding",
-      Link: "abc",
-      ImageSrc: ArrayDestruct,
-      Color: "black",
+      icon: TbBrandJavascript,
+      color: "#FF8C00",
+      title: "Javascript",
+    },
+    {
+      icon: TbBrandHtml5,
+      color: "#e34c26",
+      title: "HTML",
+    },
+    {
+      icon: BsFiletypeXml,
+      color: "#6C8EBF",
+      title: "XML",
+    },
+    {
+      icon: TbBrandCss3,
+      color: "#264de4",
+      title: "CSS",
+    },
+
+    {
+      icon: TbBrandReact,
+      color: "#61dbfb",
+      title: "ReactJS",
+    },
+
+    {
+      icon: DiNodejs,
+      color: "#3c873a",
+      title: "NodeJS",
+    },
+
+    {
+      icon: SiFlask,
+      color: "black",
+      title: "Flask",
+    },
+    {
+      icon: TbBrandPowershell,
+      color: "#1c6eb5",
+      title: "Powershell Scripts",
+    },
+    {
+      icon: TbBrandMysql,
+      color: "#de8714",
+      title: "MySQL",
+    },
+    {
+      icon: SiMongodb,
+      color: "#00ed64",
+      title: "MongoDB",
     },
   ];
   return (

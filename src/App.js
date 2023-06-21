@@ -27,7 +27,7 @@ function App() {
     <Grommet>
       <Box
         className="main"
-        background="linear-gradient(to bottom, #34495E, #171E29)"
+        background="linear-gradient(to bottom, #293445, #171E29)"
       >
         <NavBar />
         <Box pad={{ top: "large" }}>
@@ -42,5 +42,5 @@ function App() {
     </Grommet>
   );
 }
-
+//   background="linear-gradient(to bottom, #865ED6, #18BAB9)"
 export default App;

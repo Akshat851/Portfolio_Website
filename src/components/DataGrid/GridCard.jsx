@@ -25,12 +25,27 @@ export const GridCard = ({ obj }) => {
       flex="grow"
     >
       <CardHeader>
-        <Box className="container">
+        {/* <Box className="container">
           <Image src={obj.ImageSrc} fit="contain" />
           <Box className="overlay" justify="center" pad="small">
             <Text color="white" alignSelf="center">
               {obj.Description}
             </Text>
+          </Box>
+        </Box> */}
+
+        <Box className="flip-card">
+          <Box className="flip-card-inner">
+            <Image src={obj.ImageSrc} fit="contain" />
+            <Box
+              className="flip-card-back"
+              justify="center"
+              background="#2980b9"
+            >
+              <Text color="white" alignSelf="center">
+                {obj.Description}
+              </Text>
+            </Box>
           </Box>
         </Box>
       </CardHeader>
