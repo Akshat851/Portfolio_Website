@@ -9,19 +9,31 @@ import { FooterBar } from "./components/FooterBar";
 import { useRef, useState } from "react";
 import { useEffect } from "react";
 function App() {
-  // const homeRef = useRef(null);
-  // const aboutRef = useRef(null);
-  // const contactRef = useRef(null);
-  // const portfolioRef = useRef(null);
-  // const experienceRef = useRef(null);
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const experienceRef = useRef(null);
 
-  //         stateChanger={(ref) => {
-  //           // console.log(ref);
-  //           scrollToSection(experienceRef);
-  //         }}
-  // const scrollToSection = (ref) => {
-  //   ref.current.scrollIntoView({ behavior: "smooth" });
-  // };
+  const handleClick = (obj) => {
+    switch (obj) {
+      case "Home":
+        homeRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "About":
+        aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "Contact":
+        contactRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "Experience":
+        experienceRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "Portfolio":
+        portfolioRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+    }
+  };
 
   return (
     <Grommet>
@@ -29,14 +41,22 @@ function App() {
         className="main"
         background="linear-gradient(to bottom, #293445, #171E29)"
       >
-        <NavBar />
-        <Box pad={{ top: "large" }}>
-          <HomePage />
-        </Box>
-        <About />
-        <Portfolio />
-        <Experience />
-        <Contact />
+        <NavBar callButton={(obj) => handleClick(obj)} />
+        <div ref={homeRef}>
+          <HomePage callButton={(obj) => handleClick(obj)} />
+        </div>
+        <div ref={aboutRef}>
+          <About />
+        </div>
+        <div ref={portfolioRef}>
+          <Portfolio />
+        </div>
+        <div ref={experienceRef}>
+          <Experience />
+        </div>
+        <div ref={contactRef}>
+          <Contact />
+        </div>
         <FooterBar />
       </Box>
     </Grommet>

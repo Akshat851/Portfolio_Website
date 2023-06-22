@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Button, Heading, Paragraph, Text } from "grommet";
 import { useState } from "react";
 import { Download } from "grommet-icons";
+import Resume from "../assets/resume/Resume.pdf";
 export const About = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -33,25 +34,33 @@ export const About = () => {
         inquiries, please don't hesitate to contact me. Let's collaborate on
         exciting projects and create remarkable experiences together!
       </Paragraph>
-      <Box
-        margin={{ top: "small" }}
-        alignSelf="start"
-        round="56px"
-        direction="row"
-        border={{
-          color: "#6FFFB0",
-          size: "small",
+      <a
+        href={Resume}
+        download="Resume"
+        style={{
+          textDecoration: "none",
+          width: "150px",
+          paddingTop: "12px",
         }}
-        focusIndicator={false}
-        hoverIndicator={{ color: "#171E29" }}
-        onClick={() => {}}
-        pad={{ horizontal: "medium", vertical: "small" }}
       >
-        <Text color="white">Resume</Text>
-        <Box pad={{ left: "small" }} justify="center">
-          <Download color="white" size="medium" />
+        <Box
+          round="56px"
+          direction="row"
+          border={{
+            color: "#6FFFB0",
+            size: "small",
+          }}
+          focusIndicator={false}
+          hoverIndicator={{ color: "#171E29" }}
+          onClick={() => {}}
+          pad={{ horizontal: "medium", vertical: "small" }}
+        >
+          <Text color="white">Resume</Text>
+          <Box pad={{ left: "small" }} justify="center">
+            <Download color="white" size="medium" />
+          </Box>
         </Box>
-      </Box>
+      </a>
     </Box>
   );
 };

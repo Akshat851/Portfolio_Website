@@ -13,12 +13,15 @@ export const FooterBar = () => {
   const size = useContext(ResponsiveContext);
   const [isHovered, setIsHovered] = useState(false);
   const footerLinks = [
-    { icon: Mail },
-    { icon: Linkedin },
-    { icon: Github },
-    { icon: Instagram },
-    { icon: Facebook },
-    { icon: Twitter },
+    { icon: Mail, linkIs: "mailto:someone@example.com" },
+    {
+      icon: Linkedin,
+      linkIs: "https://www.linkedin.com/in/akshat-mahajan-1186841a9",
+    },
+    { icon: Github, linkIs: "https://github.com/Akshat851" },
+    { icon: Instagram, linkIs: "https://www.instagram.com/akshatmahajan851/" },
+    { icon: Facebook, linkIs: "https://www.facebook.com/akshat.mahajan.182" },
+    { icon: Twitter, linkIs: "https://twitter.com/AkshatMahajan15" },
   ];
   return (
     <Box>

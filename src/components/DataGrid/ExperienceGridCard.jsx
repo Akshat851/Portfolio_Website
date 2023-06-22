@@ -1,23 +1,9 @@
 import React from "react";
-import {
-  Box,
-  Heading,
-  Paragraph,
-  Image,
-  Button,
-  Grid,
-  CardBody,
-  Card,
-  Text,
-  CardHeader,
-  CardFooter,
-} from "grommet";
-import { Html5 } from "grommet-icons";
+import { Box, Card, Text, CardHeader, CardFooter } from "grommet";
 import { useState } from "react";
 
 export const ExperienceGridCard = ({ obj }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [hovered, setHovered] = useState(false);
   return (
     <Box
       elevation="xlarge"

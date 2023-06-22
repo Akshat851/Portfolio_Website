@@ -10,26 +10,31 @@ import {
 import { Menu as MenuIcon, Close } from "grommet-icons";
 import React, { useState } from "react";
 
-export const NavBar = () => {
+export const NavBar = ({ callButton }) => {
   const [showSidebar, setShowSidebar] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const buttonOptions = ["Home", "About", "Portfolio", "Experience", "Contact"];
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   };
-  const [colorChange, setColorchange] = useState(false);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
+  const onClick = (obj) => {
+    // toggleSidebar();
+    callButton(obj);
   };
-  window.addEventListener("scroll", changeNavbarColor);
+  // to change navbar color when scrolling
+  // const [colorChange, setColorchange] = useState(false);
+  // const changeNavbarColor = () => {
+  //   if (window.scrollY >= 80) {
+  //     setColorchange(true);
+  //   } else {
+  //     setColorchange(false);
+  //   }
+  // };
+  // window.addEventListener("scroll", changeNavbarColor);
   return (
     <Header
       className="navbar"
-      background={colorChange ? "#293445" : "#293445"}
+      // background={colorChange ? "#293445" : "#293445"}
+      background="#293445"
       pad="small"
       width="100%"
       elevation="small"
@@ -55,7 +60,9 @@ export const NavBar = () => {
                     hoverIndicator={{
                       color: "#171E29",
                     }}
-                    onClick={() => {}}
+                    onClick={() => {
+                      callButton(obj);
+                    }}
                     pad="small"
                     focusIndicator={false}
                   >
@@ -70,13 +77,21 @@ export const NavBar = () => {
       {showSidebar && (
         <Layer>
           <Box
-            background="linear-gradient(to bottom, #171E29, #34495E)"
+            background="linear-gradient(to bottom, #171E29, #293445)"
             pad="large"
           >
             <Button alignSelf="end" icon={<Close />} onClick={toggleSidebar} />
             <Box gap="large" height="100vh" align="center">
               {buttonOptions.map((obj, key) => {
-                return <Button margin="small" plain label={obj} />;
+                return (
+                  <Button
+                    key={key}
+                    margin="small"
+                    plain
+                    label={obj}
+                    onClick={() => onClick(obj)}
+                  />
+                );
               })}
             </Box>
           </Box>
