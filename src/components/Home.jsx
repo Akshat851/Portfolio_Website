@@ -1,13 +1,14 @@
 import React from "react";
-import { Box, Heading, Paragraph, Image, Button, Grid, Text } from "grommet";
-import { useState } from "react";
-import Akshat from "../assets/Self/11.jpg";
+import { Box, Heading, Image, Grid, Text } from "grommet";
+import Akshat from "../assets/Self/homeImage.jpg";
 import { FormNextLink } from "grommet-icons";
 import Typewriter from "typewriter-effect";
+import CustomCursor from "../assets/vectors/waving-hand.svg";
 export const Home = ({ callButton }) => {
   return (
-    <Box pad={{ top: "large" }}>
-      <Box pad="xlarge" width="100%" align="center" justify="center">
+    <Box pad={{ top: "large" }} align="center" justify="center">
+      <Box pad="xlarge" width="100%">
+        {/* <Bullseye /> */}
         <Grid
           columns={{
             count: "fit",
@@ -19,8 +20,10 @@ export const Home = ({ callButton }) => {
           fill="horizontal"
           gap="medium"
         >
-          <Image className="shape" src={Akshat} />
-          <Box pad={{ horizontal: "large" }} width="xlarge" direction="column">
+          <Box align="center">
+            <Image className="shape" src={Akshat} />
+          </Box>
+          <Box width="xlarge" direction="column">
             <Heading color="white" level={1} size="large" margin="none">
               <Box>
                 <Typewriter

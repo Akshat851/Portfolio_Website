@@ -17,33 +17,33 @@ export const Portfolio = () => {
     {
       Description:
         "Developed Crowdfunding website using Blockchain technology.",
-      Link: "abc",
+      Link: "#",
       ImageSrc: ArrayDestruct,
       Color: "#e8fc4c",
     },
     {
       Description: "My portfolio website build with React.js",
-      Link: "abc",
+      Link: "https://github.com/Akshat851/Portfolio_Website",
       ImageSrc: ArrayDestruct,
       Color: "#865ed6",
     },
     {
       Description:
         "This app displays list of vocabulary word for user to learn Kannada language.",
-      Link: "abc",
+      Link: "https://github.com/Akshat851/Kannada-Language",
       ImageSrc: ArrayDestruct,
       Color: "orange",
     },
     {
       Description:
         "An App which shows latest News with custom search functionality.",
-      Link: "abc",
+      Link: "https://github.com/Akshat851/News-App",
       ImageSrc: ArrayDestruct,
       Color: "red",
     },
     {
       Description: "CRUD App to maintain Books record.",
-      Link: "abc",
+      Link: "https://github.com/Akshat851/Books-Data-App",
       ImageSrc: ArrayDestruct,
       Color: "cyan",
     },

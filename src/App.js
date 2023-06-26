@@ -6,8 +6,7 @@ import { Portfolio } from "./components/Portfolio";
 import { Experience } from "./components/Experience";
 import { Contact } from "./components/Contact";
 import { FooterBar } from "./components/FooterBar";
-import { useRef, useState } from "react";
-import { useEffect } from "react";
+import { useRef } from "react";
 function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -42,19 +41,19 @@ function App() {
         background="linear-gradient(to bottom, #293445, #171E29)"
       >
         <NavBar callButton={(obj) => handleClick(obj)} />
-        <div ref={homeRef}>
+        <div ref={homeRef} className="home">
           <HomePage callButton={(obj) => handleClick(obj)} />
         </div>
-        <div ref={aboutRef}>
+        <div ref={aboutRef} className="about">
           <About />
         </div>
-        <div ref={portfolioRef}>
+        <div ref={portfolioRef} className="portfolio">
           <Portfolio />
         </div>
-        <div ref={experienceRef}>
+        <div ref={experienceRef} className="experience">
           <Experience />
         </div>
-        <div ref={contactRef}>
+        <div ref={contactRef} className="contact">
           <Contact />
         </div>
         <FooterBar />

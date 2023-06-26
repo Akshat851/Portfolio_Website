@@ -1,22 +1,16 @@
 import React from "react";
 import {
   Box,
-  Heading,
-  Paragraph,
   Image,
-  Button,
-  Grid,
-  CardBody,
   Card,
   Text,
   CardHeader,
   CardFooter,
+  Anchor,
 } from "grommet";
 import { useState } from "react";
 
 export const GridCard = ({ obj }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [hovered, setHovered] = useState(false);
   return (
     <Card
       elevation="xlarge"
@@ -25,15 +19,6 @@ export const GridCard = ({ obj }) => {
       flex="grow"
     >
       <CardHeader>
-        {/* <Box className="container">
-          <Image src={obj.ImageSrc} fit="contain" />
-          <Box className="overlay" justify="center" pad="small">
-            <Text color="white" alignSelf="center">
-              {obj.Description}
-            </Text>
-          </Box>
-        </Box> */}
-
         <Box className="flip-card">
           <Box className="flip-card-inner">
             <Image src={obj.ImageSrc} fit="contain" />
@@ -62,12 +47,17 @@ export const GridCard = ({ obj }) => {
               side: "top",
             },
           ]}
-          focusIndicator={false}
-          onClick={() => {}}
         >
-          <Text size="large" color="white">
-            Link
-          </Text>
+          <a
+            href={obj.Link}
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <Text size="large" color="white">
+              Link
+            </Text>
+          </a>
         </Box>
       </CardFooter>
     </Card>

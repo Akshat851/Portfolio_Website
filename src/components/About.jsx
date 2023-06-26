@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button, Heading, Paragraph, Text } from "grommet";
 import { useState } from "react";
 import { Download } from "grommet-icons";
-import Resume from "../assets/resume/Resume.pdf";
+import Resume from "../assets/resume/Akshat_Mahajan-Resume.pdf";
 export const About = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -36,7 +36,7 @@ export const About = () => {
       </Paragraph>
       <a
         href={Resume}
-        download="Resume"
+        download="Akshat_Mahajan-Resume"
         style={{
           textDecoration: "none",
           width: "150px",
