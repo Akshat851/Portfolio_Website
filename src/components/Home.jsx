@@ -3,12 +3,10 @@ import { Box, Heading, Image, Grid, Text } from "grommet";
 import Akshat from "../assets/Self/homeImage.jpg";
 import { FormNextLink } from "grommet-icons";
 import Typewriter from "typewriter-effect";
-import CustomCursor from "../assets/vectors/waving-hand.svg";
 export const Home = ({ callButton }) => {
   return (
     <Box pad={{ top: "large" }} align="center" justify="center">
       <Box pad="xlarge" width="100%">
-        {/* <Bullseye /> */}
         <Grid
           columns={{
             count: "fit",
