@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { Box, Button, Footer, ResponsiveContext, Text } from "grommet";
+import React, { useContext } from "react";
+import { Box, Footer, ResponsiveContext } from "grommet";
 import {
   Facebook,
   Github,
@@ -11,7 +11,6 @@ import {
 import { ButtonHelper01 } from "./ButtonHelper01";
 export const FooterBar = () => {
   const size = useContext(ResponsiveContext);
-  const [isHovered, setIsHovered] = useState(false);
   const footerLinks = [
     { icon: Mail, linkIs: "mailto:someone@example.com" },
     {

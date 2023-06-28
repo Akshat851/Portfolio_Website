@@ -1,12 +1,5 @@
 import React, { useContext } from "react";
-import {
-  Box,
-  Heading,
-  Paragraph,
-  Text,
-  Grid,
-  ResponsiveContext,
-} from "grommet";
+import { Box, Heading, Text, Grid, ResponsiveContext } from "grommet";
 import {
   TbBrandPython,
   TbBrandHtml5,

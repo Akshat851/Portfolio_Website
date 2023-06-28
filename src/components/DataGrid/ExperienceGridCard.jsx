@@ -7,14 +7,9 @@ export const ExperienceGridCard = ({ obj }) => {
   return (
     <Box
       elevation="xlarge"
-      animation={{ type: isHovered ? "jiggle" : "none", duration: 1500 }}
+      animation={{ type: isHovered ? "jiggle" : undefined, duration: 1500 }}
     >
-      <Card
-        height="200px"
-        border={{ color: obj.color }}
-        // margin="small"
-        flex="grow"
-      >
+      <Card height="200px" border={{ color: obj.color }} y flex="grow">
         <CardHeader>
           <Box
             pad="small"

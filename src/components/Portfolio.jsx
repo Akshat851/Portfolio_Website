@@ -1,15 +1,11 @@
 import React, { useContext } from "react";
-import {
-  Box,
-  Heading,
-  Paragraph,
-  Text,
-  Image,
-  Grid,
-  ResponsiveContext,
-} from "grommet";
+import { Box, Heading, Text, Grid, ResponsiveContext } from "grommet";
 import { GridCard } from "./DataGrid/GridCard";
-import ArrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
+import PortfolioImage from "../assets/portfolio/Portfolio.png";
+import Dapp from "../assets/portfolio/Dapp.png";
+import Books from "../assets/portfolio/Books.png";
+import KannadaLanguage from "../assets/portfolio/KannadaLanguage.png";
+import NewsApp from "../assets/portfolio/NewsApp.png";
 export const Portfolio = () => {
   const size = useContext(ResponsiveContext);
 
@@ -18,33 +14,33 @@ export const Portfolio = () => {
       Description:
         "Developed Crowdfunding website using Blockchain technology.",
       Link: "#",
-      ImageSrc: ArrayDestruct,
+      ImageSrc: Dapp,
       Color: "#e8fc4c",
     },
     {
-      Description: "My portfolio website build with React.js",
+      Description: "My portfolio website build with React.js and Grommet.",
       Link: "https://github.com/Akshat851/Portfolio_Website",
-      ImageSrc: ArrayDestruct,
+      ImageSrc: PortfolioImage,
       Color: "#865ed6",
     },
     {
       Description:
-        "This app displays list of vocabulary word for user to learn Kannada language.",
+        "Android App which displays list of vocabulary word for user to learn Kannada language.",
       Link: "https://github.com/Akshat851/Kannada-Language",
-      ImageSrc: ArrayDestruct,
+      ImageSrc: KannadaLanguage,
       Color: "orange",
     },
     {
       Description:
-        "An App which shows latest News with custom search functionality.",
+        "Android App which shows latest News with custom search functionality.",
       Link: "https://github.com/Akshat851/News-App",
-      ImageSrc: ArrayDestruct,
+      ImageSrc: NewsApp,
       Color: "red",
     },
     {
       Description: "CRUD App to maintain Books record.",
       Link: "https://github.com/Akshat851/Books-Data-App",
-      ImageSrc: ArrayDestruct,
+      ImageSrc: Books,
       Color: "cyan",
     },
   ];

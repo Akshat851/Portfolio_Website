@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Image,
-  Card,
-  Text,
-  CardHeader,
-  CardFooter,
-  Anchor,
-} from "grommet";
-import { useState } from "react";
+import { Box, Image, Card, Text, CardHeader, CardFooter } from "grommet";
 
 export const GridCard = ({ obj }) => {
   return (
