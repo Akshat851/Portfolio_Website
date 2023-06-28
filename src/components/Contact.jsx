@@ -60,10 +60,10 @@ export const Contact = () => {
     setStateDisabled(true);
     emailjs
       .sendForm(
-        `${process.env.REACT_APP_SERVICE_ID}`,
-        `${process.env.REACT_APP_TEMPLATE_ID}`,
+        "service_zjrq4h8",
+        "template_rmlm0sy",
         e.target,
-        `${process.env.REACT_APP_PUBLIC_KEY}`
+        "zwD-m8x18H1xY4uzR"
       )
       .then(
         (result) => {
@@ -76,6 +76,7 @@ export const Contact = () => {
           setStateDisabled(false);
         },
         (error) => {
+          setSendMessageError(true);
           setStateDisabled(false);
           console.log(error.text);
         }
