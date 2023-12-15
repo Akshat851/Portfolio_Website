@@ -1,4 +1,6 @@
-import { Box, Grommet, Heading, Text } from "grommet";
+import { useState, useEffect, useRef } from "react";
+import { Box, Grommet, Heading } from "grommet";
+import HashLoader from "react-spinners/HashLoader";
 import { NavBar } from "./components/NavBar";
 import { Home as HomePage } from "./components/Home";
 import { About } from "./components/About";
@@ -6,9 +8,7 @@ import { Portfolio } from "./components/Portfolio";
 import { Experience } from "./components/Experience";
 import { Contact } from "./components/Contact";
 import { FooterBar } from "./components/FooterBar";
-import { useRef } from "react";
-import { useState, useEffect } from "react";
-import HashLoader from "react-spinners/HashLoader";
+
 function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -33,11 +33,14 @@ function App() {
       case "Portfolio":
         portfolioRef.current?.scrollIntoView({ behavior: "smooth" });
         break;
+      default:
+        console.log("no match found");
+        break;
     }
   };
 
   useEffect(() => {
-    setShowLoader(true);
+    setShowLoader(false);
     setTimeout(() => {
       setShowLoader(false);
     }, 4000);
@@ -85,5 +88,4 @@ function App() {
     </Grommet>
   );
 }
-//   background="linear-gradient(to bottom, #865ED6, #18BAB9)"
 export default App;

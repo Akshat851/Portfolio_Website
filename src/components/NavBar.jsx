@@ -1,34 +1,35 @@
-import {
-  Box,
-  Header,
-  ResponsiveContext,
-  Button,
-  Heading,
-  Layer,
-  Text,
-} from "grommet";
+import { Box, Header, Button, Heading, Layer, Text } from "grommet";
 import { Menu as MenuIcon, Close } from "grommet-icons";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 export const NavBar = ({ callButton }) => {
   const [showSidebar, setShowSidebar] = useState(false);
-  const size = useContext(ResponsiveContext);
-
+  const [screenSize, setScreenSize] = useState(window.innerWidth);
   const buttonOptions = ["Home", "About", "Portfolio", "Experience", "Contact"];
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setScreenSize(window.innerWidth));
+    window.removeEventListener("resize", () =>
+      setScreenSize(window.innerWidth)
+    );
+  }, []);
 
   return showSidebar ? (
     <Layer
       background="linear-gradient(to bottom, #171E29, #293445)"
       position="right"
+      full="vertical"
+      style={{ width: "40%" }}
     >
-      <Button
-        alignSelf="end"
-        icon={<Close color="white" />}
-        onClick={() => {
-          setShowSidebar(false);
-        }}
-      />
-
+      <Box pad="medium">
+        <Button
+          alignSelf="end"
+          icon={<Close color="white" />}
+          onClick={() => {
+            setShowSidebar(false);
+          }}
+        />
+      </Box>
       <Box gap="large" align="center">
         {buttonOptions.map((obj, key) => {
           return (
@@ -55,13 +56,14 @@ export const NavBar = ({ callButton }) => {
       width="100%"
       elevation="small"
       style={{ position: "fixed" }}
+      responsive={true}
     >
       <Box align="center" style={{ fontFamily: "Arizonia" }}>
         <Heading margin="none" level={1}>
           Akshat
         </Heading>
       </Box>
-      {!["xsmall", "small"].includes(size) ? (
+      {screenSize > 980 ? (
         <Box direction="row" gap="small">
           {buttonOptions.map((obj, key) => {
             return (
