@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box } from "grommet";
-export const ButtonHelper01 = ({ obj }) => {
+
+export const FooterIconHelper = ({ obj }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <Box

@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Heading, Paragraph, Text } from "grommet";
 import { Download } from "grommet-icons";
 import Resume from "../assets/resume/Akshat_Mahajan-Resume.pdf";
+
 export const About = () => {
   return (
     <Box pad="xlarge" direction="column" width="100%">
@@ -16,16 +17,21 @@ export const About = () => {
         fill={true}
         textAlign="justify"
       >
-        Welcome to my portfolio! I'm Akshat Mahajan, a software developer{" "}
+        Welcome to my portfolio! I'm Akshat Mahajan, a software engineer based
+        in India. I am currently working as an
         <i>
-          <b>intern at Hewlett Packard Enterprise (HPE), </b>
+          <b> associate developer at TransUnion, </b>
         </i>
-        while pursuing my studies in The National Institute of Engineering,
-        Mysore, Karnataka, India (8th semester). With expertise in HTML, CSS,
-        ReactJS, Grommet and XML for frontend and NodeJS, ExpressJS, Flask and
-        Python for backend and MongoDB, SQL and SQLite for database, I possess a
-        strong foundation in Full Stack Web Development and Android App
-        Development.
+        in Chennai. I have also interned as a
+        <i>
+          <b> web developer at Hewlett-Packard Enterprise (HPE), </b>
+        </i>
+        Bengaluru. I have completed my bachelor's degree from the National
+        Institute of Engineering, Mysore. With expertise in HTML, CSS, ReactJS,
+        Grommet, and XML for the frontend, NodeJS, ExpressJS, Flask, and Python
+        for the backend, and MongoDB, SQL, and SQLite for the database, I
+        possess a strong foundation in full-stack web development and Android
+        app development.
       </Paragraph>
       <Paragraph
         color="white"

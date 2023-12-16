@@ -9,15 +9,17 @@ import {
   TbBrandCpp,
   TbBrandPowershell,
   TbBrandMysql,
+  TbBrandCSharp,
 } from "react-icons/tb";
 import { DiNodejs } from "react-icons/di";
 import { FaJava } from "react-icons/fa";
 import { BsFiletypeXml } from "react-icons/bs";
 import { SiFlask, SiMongodb } from "react-icons/si";
 import { ExperienceGridCard } from "./DataGrid/ExperienceGridCard";
+
 export const Experience = () => {
   const size = useContext(ResponsiveContext);
-  const projects = [
+  const technologies = [
     {
       icon: TbBrandCpp,
       color: "#007bff",
@@ -37,6 +39,11 @@ export const Experience = () => {
       icon: TbBrandJavascript,
       color: "#FF8C00",
       title: "Javascript",
+    },
+    {
+      icon: TbBrandCSharp,
+      color: "#90EE90",
+      title: "C#",
     },
     {
       icon: TbBrandHtml5,
@@ -102,7 +109,7 @@ export const Experience = () => {
           columns={!["xsmall"].includes(size) ? "small" : "100%"}
           gap="medium"
         >
-          {projects.map((obj, index) => {
+          {technologies.map((obj, index) => {
             return <ExperienceGridCard key={index} obj={obj} />;
           })}
         </Grid>

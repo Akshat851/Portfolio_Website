@@ -1,6 +1,6 @@
 import { Box, Header, Button, Heading, Layer, Text } from "grommet";
 import { Menu as MenuIcon, Close } from "grommet-icons";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export const NavBar = ({ callButton }) => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -52,7 +52,7 @@ export const NavBar = ({ callButton }) => {
     <Header
       className="navbar"
       background="#293445"
-      pad="small"
+      pad={{ horizontal: "xlarge", vertical: "small" }}
       width="100%"
       elevation="small"
       style={{ position: "fixed" }}

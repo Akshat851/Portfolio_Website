@@ -8,7 +8,8 @@ import {
   Mail,
   Twitter,
 } from "grommet-icons";
-import { ButtonHelper01 } from "./ButtonHelper01";
+import { FooterIconHelper } from "./DataGrid/FooterIconHelper";
+
 export const FooterBar = () => {
   const size = useContext(ResponsiveContext);
   const footerLinks = [
@@ -33,7 +34,7 @@ export const FooterBar = () => {
       >
         <Box direction="row" gap="xsmall">
           {footerLinks.map((obj, index) => {
-            return <ButtonHelper01 obj={obj} key={index} />;
+            return <FooterIconHelper obj={obj} key={index} />;
           })}
         </Box>
       </Footer>

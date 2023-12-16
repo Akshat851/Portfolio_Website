@@ -40,10 +40,10 @@ function App() {
   };
 
   useEffect(() => {
-    setShowLoader(false);
+    setShowLoader(true);
     setTimeout(() => {
       setShowLoader(false);
-    }, 4000);
+    }, 3500);
   }, []);
 
   return (
