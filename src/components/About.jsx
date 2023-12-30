@@ -1,11 +1,15 @@
 import React from "react";
-import { Box, Heading, Paragraph, Text } from "grommet";
-import { Download } from "grommet-icons";
+import { Box, Heading, Paragraph, Tab, Tabs, Text } from "grommet";
+import { Download, FormNextLink } from "grommet-icons";
 import Resume from "../assets/resume/Akshat_Mahajan-Resume.pdf";
 
 export const About = () => {
   return (
-    <Box pad="xlarge" direction="column" width="100%">
+    <Box
+      pad={{ horizontal: "xlarge", vertical: "small" }}
+      direction="column"
+      width="100%"
+    >
       <u style={{ textDecorationColor: "#6FFFB0" }}>
         <Heading color="white" level={1} margin="none">
           Who am I ?
@@ -61,11 +65,14 @@ export const About = () => {
         download="Akshat_Mahajan-Resume"
         style={{
           textDecoration: "none",
-          width: "150px",
-          paddingTop: "12px",
+          display: "inherit",
+          // width: "150px",
+          // paddingTop: "12px",
         }}
       >
         <Box
+          margin={{ top: "small" }}
+          alignSelf="start"
           round="56px"
           direction="row"
           border={{
@@ -79,10 +86,20 @@ export const About = () => {
         >
           <Text color="white">Resume</Text>
           <Box pad={{ left: "small" }} justify="center">
-            <Download color="white" size="medium" />
+            <Download color="white" size="18px" />
           </Box>
         </Box>
       </a>
+      {/* <Box margin={{ top: "large" }} background="pink">
+        <Tabs>
+          <Tab justify="start" title="tab 1">
+            <Box pad="medium">One</Box>
+          </Tab>
+          <Tab title="tab 2">
+            <Box pad="medium">Two</Box>
+          </Tab>
+        </Tabs>
+      </Box> */}
     </Box>
   );
 };

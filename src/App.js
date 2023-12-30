@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { Box, Grommet, Heading } from "grommet";
+import { Box, Heading } from "grommet";
 import HashLoader from "react-spinners/HashLoader";
-import { NavBar } from "./components/NavBar";
 import { Home as HomePage } from "./components/Home";
 import { About } from "./components/About";
 import { Portfolio } from "./components/Portfolio";
@@ -47,7 +46,7 @@ function App() {
   }, []);
 
   return (
-    <Grommet>
+    <>
       {showLoader ? (
         <Box
           align="center"
@@ -62,11 +61,7 @@ function App() {
           </Box>
         </Box>
       ) : (
-        <Box
-          className="main"
-          background="linear-gradient(to bottom, #293445, #171E29)"
-        >
-          <NavBar callButton={(obj) => handleClick(obj)} />
+        <Box background="linear-gradient(to bottom, #293445, #171E29)">
           <div ref={homeRef} className="home">
             <HomePage callButton={(obj) => handleClick(obj)} />
           </div>
@@ -85,7 +80,8 @@ function App() {
           <FooterBar />
         </Box>
       )}
-    </Grommet>
+    </>
   );
 }
+
 export default App;

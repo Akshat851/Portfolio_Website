@@ -45,7 +45,7 @@ export const Portfolio = () => {
     },
   ];
   return (
-    <Box pad="xlarge" width="100%">
+    <Box pad="xlarge" width="100%" margin={{ top: "xlarge" }}>
       <u style={{ textDecorationColor: "#6FFFB0" }}>
         <Heading color="white" level={1} margin="none">
           Portfolio
