@@ -18,10 +18,9 @@ export const NavBar = ({ callButton }) => {
     <>
       <Header
         background="#293445"
-        pad="medium"
-        height="xsmall"
         elevation="small"
         width="100%"
+        pad={{ horizontal: "medium", vertical: "small" }}
       >
         <Box style={{ fontFamily: "Arizonia" }}>
           <Heading margin="none" level={1} color="#FFFFFF">

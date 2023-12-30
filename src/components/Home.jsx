@@ -59,7 +59,6 @@ export const Home = ({ callButton }) => {
                   color: "#6FFFB0",
                   size: "small",
                 }}
-                focusIndicator={false}
                 hoverIndicator={{ color: "#171E29" }}
                 onClick={() => {
                   callButton("Portfolio");

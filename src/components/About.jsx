@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Heading, Paragraph, Tab, Tabs, Text } from "grommet";
-import { Download, FormNextLink } from "grommet-icons";
+import { Box, Heading, Paragraph, Text } from "grommet";
+import { Download } from "grommet-icons";
 import Resume from "../assets/resume/Akshat_Mahajan-Resume.pdf";
 
 export const About = () => {
@@ -66,8 +66,6 @@ export const About = () => {
         style={{
           textDecoration: "none",
           display: "inherit",
-          // width: "150px",
-          // paddingTop: "12px",
         }}
       >
         <Box
@@ -90,16 +88,6 @@ export const About = () => {
           </Box>
         </Box>
       </a>
-      {/* <Box margin={{ top: "large" }} background="pink">
-        <Tabs>
-          <Tab justify="start" title="tab 1">
-            <Box pad="medium">One</Box>
-          </Tab>
-          <Tab title="tab 2">
-            <Box pad="medium">Two</Box>
-          </Tab>
-        </Tabs>
-      </Box> */}
     </Box>
   );
 };

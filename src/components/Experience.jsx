@@ -16,11 +16,6 @@ import { FaJava } from "react-icons/fa";
 import { BsFiletypeXml } from "react-icons/bs";
 import { SiFlask, SiMongodb } from "react-icons/si";
 import { ExperienceGridCard } from "./DataGrid/ExperienceGridCard";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 export const Experience = () => {
   const size = useContext(ResponsiveContext);
   const technologies = [
